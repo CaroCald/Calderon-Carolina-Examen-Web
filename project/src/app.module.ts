@@ -9,6 +9,9 @@ import {AutorizacionController} from "./autorizacion.controller";
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PacienteEntity } from './paciente/paciente.entity';
 import { MedicamentoEntity } from './medicamentos/medicamento.entity';
+import { UsuarioService } from './Usuario/usuario.service';
+import { UsuarioController } from './Usuario/usuario.controller';
+import { UsuarioEntity } from './Usuario/usuario.entity';
 
 @Module({
   imports: [
@@ -23,9 +26,9 @@ import { MedicamentoEntity } from './medicamentos/medicamento.entity';
       synchronize: true,
       ssl: true,
     }),
-    TypeOrmModule.forFeature([PacienteEntity,MedicamentoEntity])
+    TypeOrmModule.forFeature([PacienteEntity,MedicamentoEntity, UsuarioEntity])
   ],
-  controllers: [AppController, PacienteController, MedicamentosController, AutorizacionController],
-  providers: [AppService, PacienteService, MedicamentoService],
+  controllers: [AppController, PacienteController, MedicamentosController, AutorizacionController, UsuarioController ],
+  providers: [AppService, PacienteService, MedicamentoService, UsuarioService],
 })
 export class AppModule {}

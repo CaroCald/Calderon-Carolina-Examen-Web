@@ -1,42 +1,50 @@
-import {Body, Controller, Get, Param, Post, Put, Req, Res, UsePipes} from "@nestjs/common";
-import {Paciente, PacienteService} from "./paciente.service";
-import {PipesUsuarios} from "../pipes/pipes.usuarios";
-import {PACIENTE_SCHEMA} from "./paciente.schema";
-import { PacienteEntity } from './paciente.entity';
+import { Body, Controller, Get, Param, Post, Put, Req, Res, UsePipes } from '@nestjs/common';
+import { Paciente, PacienteService } from './paciente.service';
 import { getConnection } from 'typeorm';
+import { PacienteEntity } from './paciente.entity';
 
 @Controller()
 export class PacienteController {
- constructor(private _pacienteService:PacienteService){
- }
-    @Get('Paciente')
-    mostrarTodos(){
-        return this._pacienteService.arregloPacientes;
-    }
-    @Post('Paciente')
-    crearPacientes(@Body(new PipesUsuarios(PACIENTE_SCHEMA)) bodyParams, @Res() res, @Res() req){
-            const paciente = new  Paciente(bodyParams.idPaciente, bodyParams.nombre, bodyParams.apellido, bodyParams.fechaNacimiento, bodyParams.hijos, bodyParams.tieneSeguro);
-            const userRepository = getConnection().getRepository(PacienteEntity);
-      const paciente = userRepository.create(req.body);
-      return userRepository.save(paciente);
-    }
+  constructor(private _pacienteService: PacienteService) {
+  }
 
-    @Get('Paciente/:id')
-    obtenerUno(@Res() res, @Req() req, @Param() parametros) {
-     const existeParametro= parametros.id;
-     if(existeParametro!=null){
-         const paciente=this._pacienteService.obtenerUno(parametros.id);
-         return res.send(paciente);
-     }else
-     {
-         return res.send({mensaje: 'Id de paciente no encontrado'})
-     }
-    }
+  @Get('Paciente')
+  mostrarTodos(@Res() response) {
 
-    @Put('Paciente/:id')
-    editarUno(@Body() bodyParams, @Res() res, @Param() parametro){
-        const respuesta=this._pacienteService.editarUno(parametro.id,bodyParams.nombre, bodyParams.apellido, bodyParams.fecha, bodyParams.hijos, bodyParams.seguro);
-        return res.send(respuesta);
+    this._pacienteService.listartodo(response);
+  }
+
+  @Post('Paciente')
+  crearPacientes(@Body('id') id,
+                 @Body('nombre') nombre,
+                 @Body('apellido') apellido,
+                 @Body('edad') edad,
+                 @Body('fecha') fecha,
+                 @Body('hijos') hijos,
+                 @Body('tieneSeguro') tieneSeguro,
+                 @Body('urlPaciente') urlPaciente,
+                 @Body('pacienteIdId') pacienteId,
+                 @Res() res, @Req() req) {
+    const userRepository = getConnection().getRepository(PacienteEntity);
+    const paciente = userRepository.create(req.body);
+    return userRepository.save(paciente);
+  }
+
+  @Get('Paciente/:id')
+  obtenerUno(@Res() res, @Req() req, @Param() parametros) {
+    const existeParametro = parametros.id;
+    if (existeParametro != null) {
+      const paciente = this._pacienteService.obtenerUno(parametros.id);
+      return res.send(paciente);
+    } else {
+      return res.send({ mensaje: 'Id de paciente no encontrado' });
     }
+  }
+
+  @Put('Paciente/:id')
+  editarUno(@Body() bodyParams, @Res() res, @Param() parametro) {
+    const respuesta = this._pacienteService.editarUno(parametro.id, bodyParams.nombre, bodyParams.apellido, bodyParams.fecha, bodyParams.hijos, bodyParams.seguro);
+    return res.send(respuesta);
+  }
 
 }

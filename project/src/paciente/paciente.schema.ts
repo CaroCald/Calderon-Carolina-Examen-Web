@@ -6,4 +6,5 @@ export const PACIENTE_SCHEMA = Joi.object().keys({
         fechaNacimiento: Joi.string().regex(/^[a-zA-Z]{3,30}$/).min(3).max(30),
         hijos:Joi.number(),
         tieneSeguro:Joi.string(),
+        urlPaciente: Joi.required()
     });

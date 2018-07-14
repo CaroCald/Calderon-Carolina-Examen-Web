@@ -1,5 +1,6 @@
 import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import { MedicamentoEntity } from '../medicamentos/medicamento.entity';
+import { UsuarioEntity } from '../Usuario/usuario.entity';
 @Entity('paciente')
 export class PacienteEntity {
 
@@ -29,5 +30,8 @@ export class PacienteEntity {
   @OneToMany(type => MedicamentoEntity, med=>med.paciente)
 
   medicamentoId:MedicamentoEntity[];
+
+  @ManyToOne(type => UsuarioEntity, med=>med.userPaciente)
+  pacienteId:PacienteEntity;
 
 }
