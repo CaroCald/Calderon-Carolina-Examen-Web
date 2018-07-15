@@ -1,41 +1,54 @@
 import { Injectable, Req } from '@nestjs/common';
-import { getConnection } from 'typeorm';
+import { createConnection, getConnection, Repository } from 'typeorm';
 import { UsuarioEntity } from './usuario.entity';
-import { Medicamento } from '../medicamentos/medicamento.service';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class UsuarioService {
 
+
   arregloUsuario: Usuario[] = [];
 
-  async listartodo(response){
-    let conex= await getConnection().getRepository(UsuarioEntity).find();
-    conex.map(data=>
-      {
-        this.crearUser(new Usuario(data.id, data.nombreUsuario, data.urlUsuario));
-      },
-    );
-    return  response.send(this.arregloUsuario);
+
+  constructor(@InjectRepository(UsuarioEntity)
+              private readonly photoRepository: Repository<UsuarioEntity>) {
+
+  }
+
+  async findAll(): Promise<UsuarioEntity[]> {
+    return await this.photoRepository.find();
+  }
+
+  async traerCinco(): Promise<UsuarioEntity[]> {
+    return await this.photoRepository.find({ relations: ["userPaciente"],  skip: 0, take: 4 });
+  }
+  async traerSiguientes(): Promise<UsuarioEntity[]> {
+    return await this.photoRepository.find({ relations: ["userPaciente"],  skip: 5, take: 9 });
   }
 
   crearUser(usuario: Usuario): Usuario[] {
     this.arregloUsuario.push(usuario);
     return this.arregloUsuario;
   }
-  async conexion(){
+
+  async conexion() {
     return await getConnection().getRepository(UsuarioEntity).find();
   }
 
-  async insertar(@Req() req){
+  async insertar(@Req() req) {
     const usuarioPeliculas = getConnection().getRepository(UsuarioEntity).create(req.body);
     return getConnection().getRepository(UsuarioEntity).save(usuarioPeliculas);
   }
 
 }
+
 export class Usuario {
   constructor(
     public id: number,
-    public nombreUsuario:string,
-    public urlUsuario:any,
-  ){
-  }}
+    public nombreUsuario: string,
+    public urlUsuario: any,
+    public correo: any,
+  ) {
+  }
+}
+

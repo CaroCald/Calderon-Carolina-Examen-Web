@@ -1,17 +1,25 @@
 import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Usuario, UsuarioService } from './usuario.service';
-import { PacienteEntity } from '../paciente/paciente.entity';
 import { getConnection, getRepository } from 'typeorm';
 import { UsuarioEntity } from './usuario.entity';
 
 @Controller()
 export class UsuarioController {
   constructor(private _usuarioService: UsuarioService) {
+
   }
 
+  @Get('cincoUsuarios')
+  mostrarCinco():Promise<UsuarioEntity[]> {
+    return this._usuarioService.traerCinco();
+  }
+  @Get('cincoSiguientes')
+  mostrarSiguientes():Promise<UsuarioEntity[]> {
+    return this._usuarioService.traerSiguientes();
+  }
   @Get('usuario')
-  async mostrarDatos(@Res() response){
-    this._usuarioService.listartodo(response);
+  findAll(): Promise<UsuarioEntity[]> {
+    return this._usuarioService.findAll();
   }
 
 

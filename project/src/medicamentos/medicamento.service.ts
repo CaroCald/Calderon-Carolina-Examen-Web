@@ -1,11 +1,27 @@
 import { Injectable } from '@nestjs/common';
-import { getConnection } from 'typeorm';
+import { getConnection, Repository } from 'typeorm';
 import { MedicamentoEntity } from './medicamento.entity';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class MedicamentoService {
   arregloMedicamento: Medicamento[] = [];
 
+  constructor(@InjectRepository(MedicamentoEntity)
+              private readonly photoRepository: Repository<MedicamentoEntity>){
+
+  }
+  async cargarMedicamentos(): Promise<MedicamentoEntity[]> {
+    return await this.photoRepository.find();
+  }
+
+  async cargarCinco(): Promise<MedicamentoEntity[]> {
+    return await this.photoRepository.find({ relations: ["paciente"], skip: 0, take: 4});
+  }
+
+  async cargarSiguiente(): Promise<MedicamentoEntity[]> {
+    return await this.photoRepository.find({ relations: ["paciente"], skip: 5, take: 9});
+  }
   crearMedicamento(medicamento: Medicamento): Medicamento[] {
     this.arregloMedicamento.push(medicamento);
     return this.arregloMedicamento;

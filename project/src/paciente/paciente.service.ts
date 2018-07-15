@@ -1,12 +1,32 @@
 import {Injectable} from "@nestjs/common";
 import { PacienteEntity } from './paciente.entity';
-import { getConnection } from 'typeorm';
+import { getConnection, Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class PacienteService {
 
     arregloPacientes: Paciente[] = [];
 
+    constructor(@InjectRepository(PacienteEntity)
+                private readonly photoRepository: Repository<PacienteEntity>){
+
+    }
+  async llenar(): Promise<PacienteEntity[]> {
+    return await this.photoRepository.find();
+  }
+
+  async taercinco(): Promise<PacienteEntity[]> {
+    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 0, take: 2});
+  }
+
+  async taeSiguiente(): Promise<PacienteEntity[]> {
+    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 3, take: 5});
+  }
+
+  async taerDos(): Promise<PacienteEntity[]> {
+    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 6, take: 8});
+  }
     crearPaciente(pacientes: Paciente): Paciente[] {
         this.arregloPacientes.push(pacientes);
         return this.arregloPacientes;

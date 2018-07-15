@@ -8,10 +8,23 @@ export class PacienteController {
   constructor(private _pacienteService: PacienteService) {
   }
 
-  @Get('Paciente')
-  mostrarTodos(@Res() response) {
+  @Get('cincoPaciente')
+  traercinco(): Promise<PacienteEntity[]> {
+    return this._pacienteService.taercinco();
+  }
+  @Get('siguientePaciente')
+  traersi(): Promise<PacienteEntity[]> {
+    return this._pacienteService.taeSiguiente();
+  }
 
-    this._pacienteService.listartodo(response);
+  @Get('dosaciente')
+  traerdos(): Promise<PacienteEntity[]> {
+    return this._pacienteService.taerDos();
+  }
+
+  @Get('Paciente')
+  findAll(): Promise<PacienteEntity[]> {
+    return this._pacienteService.llenar();
   }
 
   @Post('Paciente')

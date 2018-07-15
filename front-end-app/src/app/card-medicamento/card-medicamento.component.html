@@ -1,0 +1,31 @@
+<div class="container" style="margin-bottom: 20px">
+  <div class="row" style="margin-left: 12px">
+    <div class="col-sm-3" *ngFor="let info of medicamento; let indice=index" style="margin-bottom: 15px" >
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <div class="row">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="col-sm-4">
+                  <p style="text-align: center">Nombres: {{info.nombre}} </p>
+                </div>
+                <div class="col-sm-4">
+                  <p style="text-align: center">Usado para: {{info.usadoPara}} </p>
+                </div>
+                <div class="col-sm-4">
+                  <p style="text-align: center">Fecha caducidad {{info.fechaCaducidad}} </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="container">
+                <img src={{info.urlMedicamento}} alt="" style="width: 100px; height: 100px; align-content: center; margin-top: 10px; margin-left: 25px">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="seleccionar(indice)">Seleccionar</button>
+      </div>
+    </div>
+  </div>
+</div>

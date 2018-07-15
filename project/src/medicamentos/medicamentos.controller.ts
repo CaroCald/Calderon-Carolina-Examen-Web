@@ -1,9 +1,7 @@
 import {Body, Controller, Get, Param, Post, Put, Req, Res, UsePipes} from "@nestjs/common";
 import {Medicamento, MedicamentoService} from "./medicamento.service";
 import {PipesUsuarios} from "../pipes/pipes.usuarios";
-import {MEDICAMENTO_SCHEMA} from "./medicamento.schema";
 import {PACIENTE_SCHEMA} from "../paciente/paciente.schema";
-import { PacienteEntity } from '../paciente/paciente.entity';
 import { getConnection } from 'typeorm';
 import { MedicamentoEntity } from './medicamento.entity';
 
@@ -14,9 +12,19 @@ export class MedicamentosController {
 
     }
 
+  @Get('cincoMedicamentos')
+  cinco(): Promise<MedicamentoEntity[]> {
+    return this.medicamentoService.cargarCinco();
+  }
+
+  @Get('siguieneMedicamentos')
+  cincoMas(): Promise<MedicamentoEntity[]> {
+    return this.medicamentoService.cargarSiguiente();
+  }
+
     @Get('Medicamento')
-    mostrarTodos(@Res() response){
-        this.medicamentoService.listartodo(response)
+    findAll(): Promise<MedicamentoEntity[]> {
+      return this.medicamentoService.cargarMedicamentos();
     }
 
     @Post('Medicamento')
