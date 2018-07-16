@@ -3,76 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d30ad2-e0d9-4b75-8af7-dedf57a48be6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/e2e/tsconfig.e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/app.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-medicamento/card-medicamento.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-medicamento/card-medicamento.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-medicamento/card-medicamento.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-medicamento/card-medicamento.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-paciente/card-paciente.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-paciente/card-paciente.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-paciente/card-paciente.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-paciente/card-paciente.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-usuario/card-usuario.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-usuario/card-usuario.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-usuario/card-usuario.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/card-usuario/card-usuario.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/home/home.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/home/home.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/login/login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/medicamento/medicamento.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/medicamento/medicamento.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/medicamento/medicamento.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/medicamento/medicamento.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/paciente/paciente.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/paciente/paciente.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/paciente/paciente.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/paciente/paciente.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/user/user.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/user/user.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/user/user.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/user/user.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -87,25 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="medicamentos.controller.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts">
+      <file leaf-file-name="paciente.service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="566">
+              <caret line="27" column="90" selection-start-line="27" selection-start-column="90" selection-end-line="27" selection-end-column="90" />
               <folding>
-                <element signature="e#0#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="medicamento.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,12 +91,12 @@
         <option value="$PROJECT_DIR$/front-end-app/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/front-end-app/src/app/card-medicamento/card-medicamento.component.html" />
         <option value="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.servicio.ts" />
-        <option value="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" />
         <option value="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" />
-        <option value="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" />
         <option value="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" />
-        <option value="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" />
         <option value="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" />
+        <option value="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" />
+        <option value="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" />
+        <option value="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" />
       </list>
     </option>
   </component>
@@ -241,13 +161,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="paciente" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Calderon-Carolina-Examen-Web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calderon-Carolina-Examen-Web" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Usuario" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -296,19 +209,20 @@
       <workItem from="1531608395545" duration="12010000" />
       <workItem from="1531624722443" duration="2153000" />
       <workItem from="1531627320725" duration="6724000" />
-      <workItem from="1531665344216" duration="2695000" />
+      <workItem from="1531665344216" duration="12199000" />
+      <workItem from="1531757413453" duration="2097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52125000" />
+    <option name="totallyTimeSpent" value="63726000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30893117" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31991217" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -339,6 +253,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.servicio.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -510,9 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamento.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -537,56 +458,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="18" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="271">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -595,10 +483,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="329">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
             <element signature="e#0#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="27" column="90" selection-start-line="27" selection-start-column="90" selection-end-line="27" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>

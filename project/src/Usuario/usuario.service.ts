@@ -1,5 +1,5 @@
 import { Injectable, Req } from '@nestjs/common';
-import { createConnection, getConnection, Repository } from 'typeorm';
+import { createConnection, getConnection, Like, Repository } from 'typeorm';
 import { UsuarioEntity } from './usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 
@@ -19,11 +19,17 @@ export class UsuarioService {
     return await this.photoRepository.find();
   }
 
-  async traerCinco(): Promise<UsuarioEntity[]> {
-    return await this.photoRepository.find({ relations: ["userPaciente"],  skip: 0, take: 4 });
+  async traerCinco(nombre): Promise<UsuarioEntity[]> {
+    return await this.photoRepository.find({
+      relations: ["userPaciente"],
+      skip: 0, take: 4,
+    }
+  );
+
   }
   async traerSiguientes(): Promise<UsuarioEntity[]> {
-    return await this.photoRepository.find({ relations: ["userPaciente"],  skip: 5, take: 9 });
+    return await this.photoRepository.find({ relations: ["userPaciente"],
+      skip: 5, take: 4 });
   }
 
   crearUser(usuario: Usuario): Usuario[] {

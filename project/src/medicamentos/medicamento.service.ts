@@ -16,11 +16,12 @@ export class MedicamentoService {
   }
 
   async cargarCinco(): Promise<MedicamentoEntity[]> {
-    return await this.photoRepository.find({ relations: ["paciente"], skip: 0, take: 4});
+    return await this.photoRepository.find({ relations: ["paciente"], skip: 0, take: 4,
+    });
   }
 
   async cargarSiguiente(): Promise<MedicamentoEntity[]> {
-    return await this.photoRepository.find({ relations: ["paciente"], skip: 5, take: 9});
+    return await this.photoRepository.find({ relations: ["paciente"], skip: 5, take: 4});
   }
   crearMedicamento(medicamento: Medicamento): Medicamento[] {
     this.arregloMedicamento.push(medicamento);

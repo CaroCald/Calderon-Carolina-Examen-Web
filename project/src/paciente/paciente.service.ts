@@ -21,11 +21,11 @@ export class PacienteService {
   }
 
   async taeSiguiente(): Promise<PacienteEntity[]> {
-    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 3, take: 5});
+    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 3, take: 2});
   }
 
   async taerDos(): Promise<PacienteEntity[]> {
-    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 6, take: 8});
+    return await this.photoRepository.find({ relations: ["pacienteId"] ,  skip: 6, take: 2});
   }
     crearPaciente(pacientes: Paciente): Paciente[] {
         this.arregloPacientes.push(pacientes);
