@@ -12,17 +12,9 @@ export class MedicamentosController {
 
     }
 
-  @Get('cincoMedicamentos')
-  cinco(): Promise<MedicamentoEntity[]> {
-    return this.medicamentoService.cargarCinco();
-  }
-  @Get('siguieneMedicamentos')
-  cincoMas(): Promise<MedicamentoEntity[]> {
-    return this.medicamentoService.cargarSiguiente();
-  }
-  @Get('buscarMed/:nombre')
+  @Get('buscarMed/:nombre/:salto/:tomar')
   buscarMas(@Param() param): Promise<MedicamentoEntity[]> {
-    return this.medicamentoService.busqueda(param.nombre);
+    return this.medicamentoService.busquedaMedicamento(param.nombre, param.salto, param.tomar);
   }
 
     @Get('Medicamento')
@@ -50,26 +42,5 @@ export class MedicamentosController {
 
     }
 
-
-    @Get('Medicamento/:id')
-    obtenerUno(@Res() res, @Req() req, @Param() parametros) {
-        const validarId= (parametros.id);
-        if(validarId!=null){
-            const medicamento=this.medicamentoService.obtenerUno(parametros.id);
-            return res.send(medicamento);
-        }
-        else
-        {
-            return res.send({mensaje: 'ID no encontrado'})
-        }
-
-    }
-
-    @Put('Medicamento/:id')
-    editarUno(@Body(new PipesUsuarios(PACIENTE_SCHEMA)) bodyParams, @Res() res, @Param () parametro){
-        const respuesta=this.medicamentoService.editarUno(parametro.id, bodyParams.gramos,  bodyParams.nombre,
-            bodyParams.composicion, bodyParams.usadoPara, bodyParams.fechaCaducidad, bodyParams.numeroPastillas, bodyParams.pacienteId);
-        return res.send(respuesta);
-    }
 
 }

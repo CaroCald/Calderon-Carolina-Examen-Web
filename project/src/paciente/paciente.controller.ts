@@ -8,41 +8,9 @@ export class PacienteController {
   constructor(private _pacienteService: PacienteService) {
   }
 
-  @Get('recuperar/:id')
-  recuperarParametros(@Req() request,
-                      @Res() response,
-                      @Param() paramParams,
-                      @Query() queryParams,
-                      @Body() bodyParams){
-
-    const respuesta={
-      paramParams: paramParams,
-      queryParams: queryParams,
-      bodyParams: bodyParams,
-    };
-
-    console.log(respuesta);
-    return response.send(respuesta);
-  }
-
-  @Get('buscar/:nombre')
+  @Get('buscar/:nombre/:salto/:tomar')
   buscar(@Param() param): Promise<PacienteEntity[]> {
-    console.log(param.nombre);
-    return this._pacienteService.busqueda(param.nombre);
-  }
-
-  @Get('cincoPaciente')
-  traercinco(): Promise<PacienteEntity[]> {
-    return this._pacienteService.taercinco();
-  }
-  @Get('siguientePaciente')
-  traersi(): Promise<PacienteEntity[]> {
-    return this._pacienteService.taeSiguiente();
-  }
-
-  @Get('dosaciente')
-  traerdos(): Promise<PacienteEntity[]> {
-    return this._pacienteService.taerDos();
+    return this._pacienteService.busquedaPaciente(param.nombre, param.salto, param.tomar);
   }
 
   @Get('Paciente')
@@ -66,21 +34,5 @@ export class PacienteController {
     return userRepository.save(paciente);
   }
 
-  @Get('Paciente/:id')
-  obtenerUno(@Res() res, @Req() req, @Param() parametros) {
-    const existeParametro = parametros.id;
-    if (existeParametro != null) {
-      const paciente = this._pacienteService.obtenerUno(parametros.id);
-      return res.send(paciente);
-    } else {
-      return res.send({ mensaje: 'Id de paciente no encontrado' });
-    }
-  }
-
-  @Put('Paciente/:id')
-  editarUno(@Body() bodyParams, @Res() res, @Param() parametro) {
-    const respuesta = this._pacienteService.editarUno(parametro.id, bodyParams.nombre, bodyParams.apellido, bodyParams.fecha, bodyParams.hijos, bodyParams.seguro);
-    return res.send(respuesta);
-  }
 
 }

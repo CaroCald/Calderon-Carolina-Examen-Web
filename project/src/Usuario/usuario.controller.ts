@@ -10,23 +10,19 @@ export class UsuarioController {
 
   }
 
-  @Get('cincoUsuarios')
-  mostrarCinco():Promise<UsuarioEntity[]> {
-    return this._usuarioService.traerCinco();
-  }
-  @Get('cincoSiguientes')
-  mostrarSiguientes():Promise<UsuarioEntity[]> {
-    return this._usuarioService.traerSiguientes();
-  }
-  @Get('usuario')
-  findAll(): Promise<UsuarioEntity[]> {
-    return this._usuarioService.findAll();
+  @Get('usuario/:correo')
+  findAll(@Param() param): Promise<UsuarioEntity[]> {
+    return this._usuarioService.findAll( param.correo);
   }
 
   @Get('buscaruser/:nombreUsuario')
   buscar(@Param() param): Promise<UsuarioEntity[]> {
-    console.log(param.nombreUsuario);
     return this._usuarioService.busquedaUser(param.nombreUsuario);
+  }
+
+  @Get('buscarskip/:nombreUsuario/:salto/:tomar')
+  buscarSkip(@Param() param): Promise<UsuarioEntity[]> {
+    return this._usuarioService.busquedaSkip(param.nombreUsuario, param.salto, param.tomar);
   }
 
   @Post('usuario')

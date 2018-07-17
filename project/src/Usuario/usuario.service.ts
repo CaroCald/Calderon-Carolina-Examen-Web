@@ -1,5 +1,5 @@
 import { Injectable, Req } from '@nestjs/common';
-import { createConnection, getConnection, Like, Repository } from 'typeorm';
+import { createConnection, getConnection, getRepository, Like, Repository } from 'typeorm';
 import { UsuarioEntity } from './usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { PacienteEntity } from '../paciente/paciente.entity';
@@ -16,38 +16,27 @@ export class UsuarioService {
 
   }
 
+  async busquedaSkip(parametro, salto, tomar): Promise<UsuarioEntity[]> {
+    return await getConnection().getRepository(UsuarioEntity)
+      .createQueryBuilder("usuario").where({
+        nombreUsuario: Like('%' + parametro + '%')
+      })
+      .skip(salto).take(tomar)
+      .getMany();
+  }
+
   async busquedaUser(parametro): Promise<UsuarioEntity[]> {
     return await this.photoRepository.find({nombreUsuario: Like('%' + parametro + '%'),
-
-    }
-
-    );
+    });
   }
-  async findAll(): Promise<UsuarioEntity[]> {
-    return await this.photoRepository.find();
-  }
-
-  async traerCinco(): Promise<UsuarioEntity[]> {
-    return await this.photoRepository.find({
-      relations: ["userPaciente"],
-      skip: 0, take: 4,
-    }
-  );
+   async findAll( correo): Promise<UsuarioEntity[]> {
+    return await getConnection().getRepository(UsuarioEntity)
+      .createQueryBuilder("usuario").where({
+        correo: correo
+      }).getMany()
 
   }
-  async traerSiguientes(): Promise<UsuarioEntity[]> {
-    return await this.photoRepository.find({ relations: ["userPaciente"],
-      skip: 5, take: 4 });
-  }
 
-  crearUser(usuario: Usuario): Usuario[] {
-    this.arregloUsuario.push(usuario);
-    return this.arregloUsuario;
-  }
-
-  async conexion() {
-    return await getConnection().getRepository(UsuarioEntity).find();
-  }
 
   async insertar(@Req() req) {
     const usuarioPeliculas = getConnection().getRepository(UsuarioEntity).create(req.body);
