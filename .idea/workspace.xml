@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d30ad2-e0d9-4b75-8af7-dedf57a48be6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,13 +22,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="paciente.service.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
+      <file leaf-file-name="medicamentos.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="27" column="90" selection-start-line="27" selection-start-column="90" selection-end-line="27" selection-end-column="90" />
+            <state relative-caret-position="225">
+              <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#0#91#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usuario.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,11 +106,11 @@
         <option value="$PROJECT_DIR$/front-end-app/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/front-end-app/src/app/card-medicamento/card-medicamento.component.html" />
         <option value="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.servicio.ts" />
-        <option value="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" />
-        <option value="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" />
-        <option value="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" />
         <option value="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" />
+        <option value="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" />
         <option value="$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts" />
+        <option value="$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts" />
+        <option value="$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts" />
         <option value="$PROJECT_DIR$/project/src/Usuario/usuario.service.ts" />
       </list>
     </option>
@@ -107,16 +122,14 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/front-end-app/node_modules" />
     <handled-path value="$PROJECT_DIR$/project/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/front-end-app/package.json" />
       <path value="$PROJECT_DIR$/project/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -161,6 +174,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="paciente" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Calderon-Carolina-Examen-Web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Calderon-Carolina-Examen-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Usuario" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -179,7 +199,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.scopes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/front-end-app/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/project/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -210,12 +230,12 @@
       <workItem from="1531624722443" duration="2153000" />
       <workItem from="1531627320725" duration="6724000" />
       <workItem from="1531665344216" duration="12199000" />
-      <workItem from="1531757413453" duration="2097000" />
+      <workItem from="1531757413453" duration="19801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63726000" />
+    <option name="totallyTimeSpent" value="81430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -454,69 +474,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.entity.ts">
+    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="330">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="17" selection-end-column="3" />
           <folding>
-            <element signature="e#0#93#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamento.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="236">
+          <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts">
+    <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        <state relative-caret-position="208">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
-            <element signature="e#0#91#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="87">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/Usuario/usuario.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="130">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
+    <entry file="file://$PROJECT_DIR$/project/src/medicamentos/medicamentos.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="27" column="90" selection-start-line="27" selection-start-column="90" selection-end-line="27" selection-end-column="90" />
+        <state relative-caret-position="225">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#91#0" expanded="true" />
           </folding>
         </state>
       </provider>

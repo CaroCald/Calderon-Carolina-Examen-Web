@@ -1,11 +1,34 @@
-import { Body, Controller, Get, Param, Post, Put, Req, Res, UsePipes } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query, Req, Res, UsePipes } from '@nestjs/common';
 import { Paciente, PacienteService } from './paciente.service';
-import { getConnection } from 'typeorm';
+import { getConnection, Like } from 'typeorm';
 import { PacienteEntity } from './paciente.entity';
 
 @Controller()
 export class PacienteController {
   constructor(private _pacienteService: PacienteService) {
+  }
+
+  @Get('recuperar/:id')
+  recuperarParametros(@Req() request,
+                      @Res() response,
+                      @Param() paramParams,
+                      @Query() queryParams,
+                      @Body() bodyParams){
+
+    const respuesta={
+      paramParams: paramParams,
+      queryParams: queryParams,
+      bodyParams: bodyParams,
+    };
+
+    console.log(respuesta);
+    return response.send(respuesta);
+  }
+
+  @Get('buscar/:nombre')
+  buscar(@Param() param): Promise<PacienteEntity[]> {
+    console.log(param.nombre);
+    return this._pacienteService.busqueda(param.nombre);
   }
 
   @Get('cincoPaciente')

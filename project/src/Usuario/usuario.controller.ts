@@ -1,7 +1,8 @@
-import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Req, Res } from '@nestjs/common';
 import { Usuario, UsuarioService } from './usuario.service';
 import { getConnection, getRepository } from 'typeorm';
 import { UsuarioEntity } from './usuario.entity';
+import { PacienteEntity } from '../paciente/paciente.entity';
 
 @Controller()
 export class UsuarioController {
@@ -22,6 +23,11 @@ export class UsuarioController {
     return this._usuarioService.findAll();
   }
 
+  @Get('buscaruser/:nombreUsuario')
+  buscar(@Param() param): Promise<UsuarioEntity[]> {
+    console.log(param.nombreUsuario);
+    return this._usuarioService.busquedaUser(param.nombreUsuario);
+  }
 
   @Post('usuario')
   mostrar(@Body('id') id,

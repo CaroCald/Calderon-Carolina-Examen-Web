@@ -2,6 +2,7 @@ import { Injectable, Req } from '@nestjs/common';
 import { createConnection, getConnection, Like, Repository } from 'typeorm';
 import { UsuarioEntity } from './usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
+import { PacienteEntity } from '../paciente/paciente.entity';
 
 @Injectable()
 export class UsuarioService {
@@ -15,11 +16,18 @@ export class UsuarioService {
 
   }
 
+  async busquedaUser(parametro): Promise<UsuarioEntity[]> {
+    return await this.photoRepository.find({nombreUsuario: Like('%' + parametro + '%'),
+
+    }
+
+    );
+  }
   async findAll(): Promise<UsuarioEntity[]> {
     return await this.photoRepository.find();
   }
 
-  async traerCinco(nombre): Promise<UsuarioEntity[]> {
+  async traerCinco(): Promise<UsuarioEntity[]> {
     return await this.photoRepository.find({
       relations: ["userPaciente"],
       skip: 0, take: 4,

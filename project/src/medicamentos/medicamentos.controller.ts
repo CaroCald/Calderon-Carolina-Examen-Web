@@ -16,10 +16,13 @@ export class MedicamentosController {
   cinco(): Promise<MedicamentoEntity[]> {
     return this.medicamentoService.cargarCinco();
   }
-
   @Get('siguieneMedicamentos')
   cincoMas(): Promise<MedicamentoEntity[]> {
     return this.medicamentoService.cargarSiguiente();
+  }
+  @Get('buscarMed/:nombre')
+  buscarMas(@Param() param): Promise<MedicamentoEntity[]> {
+    return this.medicamentoService.busqueda(param.nombre);
   }
 
     @Get('Medicamento')

@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { getConnection, Repository } from 'typeorm';
+import { getConnection, Like, Repository } from 'typeorm';
 import { MedicamentoEntity } from './medicamento.entity';
 import { InjectRepository } from '@nestjs/typeorm';
+import { PacienteEntity } from '../paciente/paciente.entity';
 
 @Injectable()
 export class MedicamentoService {
@@ -13,6 +14,9 @@ export class MedicamentoService {
   }
   async cargarMedicamentos(): Promise<MedicamentoEntity[]> {
     return await this.photoRepository.find();
+  }
+  async busqueda(parametro): Promise<MedicamentoEntity[]> {
+    return await this.photoRepository.find({ nombre: Like('%' + parametro + '%') });
   }
 
   async cargarCinco(): Promise<MedicamentoEntity[]> {
