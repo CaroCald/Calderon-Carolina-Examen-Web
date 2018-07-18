@@ -7,18 +7,16 @@ import { PacienteEntity } from '../paciente/paciente.entity';
 @Injectable()
 export class UsuarioService {
 
-
   arregloUsuario: Usuario[] = [];
-
 
   constructor(@InjectRepository(UsuarioEntity)
               private readonly photoRepository: Repository<UsuarioEntity>) {
 
   }
-
   async busquedaSkip(parametro, salto, tomar): Promise<UsuarioEntity[]> {
     return await getConnection().getRepository(UsuarioEntity)
-      .createQueryBuilder("usuario").where({
+      .createQueryBuilder("usuario")
+      .where({
         nombreUsuario: Like('%' + parametro + '%')
       })
       .skip(salto).take(tomar)
@@ -37,6 +35,30 @@ export class UsuarioService {
 
   }
 
+  async prueba(parametro, saltar, tomar): Promise<UsuarioEntity[]> {
+   return await this.photoRepository.find(
+     {
+       relations: ["userPaciente"] ,
+       where:{
+         nombreUsuario: Like('%' + parametro + '%')
+       },
+       skip: saltar, take:tomar
+     }
+     );
+  }
+
+
+
+  async join(id){
+    return await getConnection().getRepository(PacienteEntity)
+      .createQueryBuilder()
+      .relation(UsuarioEntity, "userPaciente")
+      .of(id)
+      .loadMany();
+  }
+  async llenar(): Promise<UsuarioEntity[]> {
+    return await this.photoRepository.find();
+  }
 
   async insertar(@Req() req) {
     const usuarioPeliculas = getConnection().getRepository(UsuarioEntity).create(req.body);

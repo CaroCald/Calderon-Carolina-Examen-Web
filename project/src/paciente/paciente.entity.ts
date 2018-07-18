@@ -31,7 +31,7 @@ export class PacienteEntity {
 
   medicamentoId:MedicamentoEntity[];
 
-  @ManyToOne(type => UsuarioEntity, med=>med.userPaciente)
+  @ManyToOne(type => UsuarioEntity, pacienteId=>pacienteId.userPaciente)
   pacienteId:PacienteEntity;
 
 }

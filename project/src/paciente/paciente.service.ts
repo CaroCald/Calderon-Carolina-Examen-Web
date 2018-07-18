@@ -28,6 +28,17 @@ export class PacienteService {
     return await this.photoRepository.find();
   }
 
+  async prueba(parametro, saltar, tomar): Promise<PacienteEntity[]> {
+    return await this.photoRepository.find(
+      {
+        relations: ["medicamentoId"] ,
+        where:{
+          nombre: Like('%' + parametro + '%')
+        },
+        skip: saltar, take:tomar
+      }
+    );
+  }
 }
 
 export class Paciente {

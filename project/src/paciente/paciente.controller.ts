@@ -12,6 +12,10 @@ export class PacienteController {
   buscar(@Param() param): Promise<PacienteEntity[]> {
     return this._pacienteService.busquedaPaciente(param.nombre, param.salto, param.tomar);
   }
+  @Get('pruebaPaciente/:nombre/:salto/:tomar')
+  probar(@Param() param): Promise<PacienteEntity[]> {
+    return this._pacienteService.prueba(param.nombre, param.salto, param.tomar);
+  }
 
   @Get('Paciente')
   findAll(): Promise<PacienteEntity[]> {

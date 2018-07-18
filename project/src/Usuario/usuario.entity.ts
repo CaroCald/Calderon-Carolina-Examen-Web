@@ -14,7 +14,7 @@ export class UsuarioEntity {
   @Column({ length: 500 })
   urlUsuario: string;
 
-  @OneToMany(type => PacienteEntity, med=>med.pacienteId)
+  @OneToMany(type => PacienteEntity, userPaciente=>userPaciente.pacienteId)
 
   userPaciente:PacienteEntity[];
 

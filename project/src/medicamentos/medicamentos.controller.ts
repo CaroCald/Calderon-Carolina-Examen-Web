@@ -1,7 +1,5 @@
 import {Body, Controller, Get, Param, Post, Put, Req, Res, UsePipes} from "@nestjs/common";
 import {Medicamento, MedicamentoService} from "./medicamento.service";
-import {PipesUsuarios} from "../pipes/pipes.usuarios";
-import {PACIENTE_SCHEMA} from "../paciente/paciente.schema";
 import { getConnection } from 'typeorm';
 import { MedicamentoEntity } from './medicamento.entity';
 
