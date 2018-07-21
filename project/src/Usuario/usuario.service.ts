@@ -38,7 +38,7 @@ export class UsuarioService {
   async prueba(parametro, saltar, tomar): Promise<UsuarioEntity[]> {
    return await this.photoRepository.find(
      {
-       relations: ["userPaciente"] ,
+       relations: ["userPaciente" ] ,
        where:{
          nombreUsuario: Like('%' + parametro + '%')
        },

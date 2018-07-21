@@ -26,7 +26,7 @@ export class PacienteService {
 
   async llenar(): Promise<PacienteEntity[]> {
     return await this.photoRepository.find();
-  }
+  }k87u
 
   async prueba(parametro, saltar, tomar): Promise<PacienteEntity[]> {
     return await this.photoRepository.find(
@@ -39,6 +39,22 @@ export class PacienteService {
       }
     );
   }
+
+
+  async  join(): Promise<PacienteEntity[]>{
+    return await this.photoRepository.find(
+      {
+        join: {
+          alias: "paciente",
+          leftJoinAndSelect: {
+            medicamentoId: "paciente.medicamentoId",
+            pacienteId: "paciente.pacienteId",
+          }
+        }
+      }
+    );
+  }
+
 }
 
 export class Paciente {

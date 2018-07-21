@@ -15,6 +15,7 @@ export class UsuarioController {
     return this._usuarioService.findAll( param.correo);
   }
 
+
   @Get('buscaruser/:nombreUsuario')
   buscar(@Param() param): Promise<UsuarioEntity[]> {
     return this._usuarioService.busquedaUser(param.nombreUsuario);

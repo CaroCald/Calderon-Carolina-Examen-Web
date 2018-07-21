@@ -1,0 +1,39 @@
+<div class="container" style="margin-top: 30px;  border-bottom-color: black">
+  <div class="card">
+    <div class="card-body">
+      <h3 >Peticiones</h3>
+      <div class="row">
+        <div class="col-sm-6">
+          <app-card-usuario
+            [nombre]="detalleUsuariio.nombre"
+            [urlImagen]="detalleUsuariio.url"
+          ></app-card-usuario>
+        </div>
+        <div class="col-sm-6 ">
+          <h1 class="text-center">EN ESPERA</h1>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="col-sm-5">
+          <app-card-medicamento
+            [urlImagen]="detalleMedicamento.url"
+            [nombre]="detalleMedicamento.nombre"
+            [usadoPara]="detalleMedicamento.usadoPara"
+          ></app-card-medicamento>
+        </div>
+        <div class="col-sm-2">
+          <i class="fas fa-angle-double-right"></i>
+          <i class="fas fa-angle-double-left"></i>
+        </div>
+        <div class="col-sm-5">
+          <app-card-medicamento
+            [urlImagen]="detalleMedicamento.url"
+            [nombre]="detalleMedicamento.nombre"
+            [usadoPara]="detalleMedicamento.usadoPara"
+          ></app-card-medicamento>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,37 @@
+<h3 style="text-align: center">SELECCION DE TRANSFERENCIA</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-card-usuario
+        [urlImagen]="detalleUsuario.url"
+        [nombre]="detalleUsuario.nombre"
+      ></app-card-usuario>
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="margin-bottom: 20px; margin-top: 30px">
+  <div class="row" style="margin-left: 12px">
+    <div class="col-sm-3" *ngFor="let info of medicamento" style="margin-bottom: 15px" >
+      <div class="card" style="width: 15rem">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <p style="text-align: center">{{info.nombre}} </p>
+              <p style="text-align: center"> {{info.usadoPara}} </p>
+            </div>
+            <div class="col-sm-6">
+              <img src={{info.urlMedicamento}} alt="" style="width: 100px; height: 100px; align-content: center; margin-top: 10px">
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="seleccionar(info.id, info.estado)">Pedir Trasnferencia</button>
+      </div>
+    </div>
+  </div>
+</div>
+

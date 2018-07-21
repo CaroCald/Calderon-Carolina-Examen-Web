@@ -12,6 +12,9 @@ import { MedicamentoEntity } from './medicamentos/medicamento.entity';
 import { UsuarioService } from './Usuario/usuario.service';
 import { UsuarioController } from './Usuario/usuario.controller';
 import { UsuarioEntity } from './Usuario/usuario.entity';
+import { PeticionesEntity } from './Peticiones/peticiones.entity';
+import { PeticionesController } from './Peticiones/peticiones.controller';
+import { PeticionesService } from './Peticiones/peticiones.service';
 
 @Module({
   imports: [
@@ -26,9 +29,9 @@ import { UsuarioEntity } from './Usuario/usuario.entity';
       synchronize: true,
       ssl: true,
     }),
-    TypeOrmModule.forFeature([PacienteEntity,MedicamentoEntity, UsuarioEntity])
+    TypeOrmModule.forFeature([PacienteEntity,MedicamentoEntity, UsuarioEntity, PeticionesEntity])
   ],
-  controllers: [AppController, PacienteController, MedicamentosController, AutorizacionController, UsuarioController ],
-  providers: [AppService, PacienteService, MedicamentoService, UsuarioService],
+  controllers: [AppController, PacienteController, MedicamentosController, AutorizacionController, UsuarioController, PeticionesController ],
+  providers: [AppService, PacienteService, MedicamentoService, UsuarioService, PeticionesService],
 })
 export class AppModule {}

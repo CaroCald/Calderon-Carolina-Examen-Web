@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post, Put, Query, Req, Res, UsePipes } fr
 import { Paciente, PacienteService } from './paciente.service';
 import { getConnection, Like } from 'typeorm';
 import { PacienteEntity } from './paciente.entity';
+import { UsuarioEntity } from '../Usuario/usuario.entity';
 
 @Controller()
 export class PacienteController {
@@ -16,7 +17,10 @@ export class PacienteController {
   probar(@Param() param): Promise<PacienteEntity[]> {
     return this._pacienteService.prueba(param.nombre, param.salto, param.tomar);
   }
-
+  @Get('join')
+  fjoin(@Param() param): Promise<PacienteEntity[]> {
+    return this._pacienteService.join()
+  }
   @Get('Paciente')
   findAll(): Promise<PacienteEntity[]> {
     return this._pacienteService.llenar();

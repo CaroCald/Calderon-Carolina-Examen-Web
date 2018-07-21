@@ -1,0 +1,44 @@
+<div class="container" style="margin-bottom: 30px">
+  <div class="row ">
+    <div class="input-group mb-2">
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="buscar"
+             name="param" [(ngModel)]="param" #parametro="ngModel">
+      <div class="input-group-append">
+        <button type="button"  id="buscar" class="btn btn-primary" (click)="retomarBusqueda(param)">
+        <i class="fas fa-search"> </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-bottom: 20px" *ngIf="mostrarComponentes">
+  <div class="row" style="margin-left: 12px">
+    <div class="col-sm-3" *ngFor="let info of usuario" style="margin-bottom: 20px; width: 100%; height: 10%" >
+<app-card-usuario *ngIf="mostrarComponentes"
+[urlImagen]="info.urlUsuario"
+[nombre]="info.nombreUsuario"
+></app-card-usuario>
+      <button type="button" class="btn btn-secondary btn-block" (click)="seleccionar(info.id)" *ngIf="mostrarComponentes">Visitar</button>
+    </div>
+  </div>
+</div>
+
+
+<nav aria-label="Page navigation example" *ngIf="mostrarComponentes">
+  <ul class="pagination justify-content-center pagination-lg">
+    <li [class]="class">
+      <div class="d-flex justify-content-start">
+      <a class="page-link" (click)="primero(param)" tabindex="-1">Anteriores 4 </a>
+      </div>
+    </li>
+    <li [class]="class2">
+      <div class="d-flex justify-content-end">
+      <a class="page-link" (click)="mostrar(param)" >Siguientes 4</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<app-paciente *ngIf="mostrarComponentes"></app-paciente>
+<app-medicamento *ngIf="mostrarComponentes"></app-medicamento>

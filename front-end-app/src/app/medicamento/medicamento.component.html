@@ -1,0 +1,23 @@
+<div class="container" style="margin-bottom: 20px">
+  <div class="row" style="margin-left: 12px">
+    <div class="col-sm-3" *ngFor="let info of medicamento" style="margin-bottom: 15px; width: 100%; height: 10%" >
+      <app-card-medicamento
+        [urlImagen]="info.urlMedicamento"
+        [nombre]="info.nombre"
+        [usadoPara]="info.usadoPara"
+      ></app-card-medicamento>
+      <button type="button" class="btn btn-secondary btn-block" (click)="seleccionar(info.id)">Pedir Transferencia</button>
+    </div>
+  </div>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li [class]="class">
+      <a class="page-link"  tabindex="-1" >Previous</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" >Next</a>
+    </li>
+  </ul>
+</nav>

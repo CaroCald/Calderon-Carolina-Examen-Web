@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 30px">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-6">
+
+          <div class="col-sm-6" style="margin-top: 30px; margin-left: 20px">
+            <button type="button" class="btn btn-success" >Aceptar</button>
+          </div>
+
+          <div class="col-sm-6" style="margin-top: 30px; margin-left: 20px">
+            <button type="button" class="btn btn-danger" >Rechazar</button>
+          </div>
+        </div>
+        <div class="col-sm-6" >
+          <app-card-usuario
+            [nombre]=""
+            [urlImagen]=""
+            style="margin-left: 20px"
+          ></app-card-usuario>
+        </div>
+      </div>
+
+      <div class="row"  style="margin-top: 30px">
+        <div class="col-sm-5">
+          <app-card-medicamento
+            [urlImagen]="detalleMedicamento.url"
+            [nombre]="detalleMedicamento.nombre"
+            [usadoPara]="detalleMedicamento.usadoPara"
+          ></app-card-medicamento>
+        </div>
+        <div class="col-sm-2">
+          <i class="fas fa-angle-double-right"></i>
+          <i class="fas fa-angle-double-left"></i>
+        </div>
+        <div class="col-sm-5">
+          <app-card-medicamento
+            [urlImagen]="detalleMedicamento.url"
+            [nombre]="detalleMedicamento.nombre"
+            [usadoPara]="detalleMedicamento.usadoPara"
+          ></app-card-medicamento>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
