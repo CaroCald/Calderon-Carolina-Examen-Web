@@ -22,11 +22,10 @@ export class ServicioApp {
     this.idUsuario = id;
   }
 
-  agregarPacientes(paciente):Paciente[]{
-    this.paciente.push(paciente);
-    console.log('EN EL SERVICIODDD'+this.paciente);
-    return this.paciente;
+  agregarPacientes(paciente){
+   this.paciente=paciente;
   }
+
 
   setUsuario(user: User) {
     this.usuario = user;

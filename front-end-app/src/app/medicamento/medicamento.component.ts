@@ -10,20 +10,37 @@ import {ServicioApp} from "../Servicios/servicio.app";
   styleUrls: ['./medicamento.component.css']
 })
 export class MedicamentoComponent implements OnInit {
-  medicamento: medicamentos[];
+  medicamento: medicamentos[]=[];
 
   class = 'page-item';
-
+  class2='page-item';
   constructor(private http: HttpClient, private router:Router, private service:ServicioApp) {
   }
 
   ngOnInit() {
     this.class = this.class + ' ' + 'disable';
     this.escucharCambiosBusqueda();
+
   }
 
+  cargar() {
+
+    this.escucharCambiosBusqueda();
+    this.class=this.class+' disabled';
+    this.class2='page-item';
+  }
+
+  cargarMas() {
+    /*this.http.get<Paciente[]>('http://localhost:3000/dosaciente').subscribe((data: Paciente[]) => {
+      this.paciente = data;
+    });*/
+
+    this.class=this.class2;
+    this.class2=this.class+' disabled'
+  }
   escucharCambiosBusqueda(){
-    this.service.emitirMedicamento.subscribe((autos) => {this.medicamento= autos;
+    this.service.emitirMedicamento.subscribe((medicamentos) => {
+        this.medicamento= medicamentos;
     });
   }
 

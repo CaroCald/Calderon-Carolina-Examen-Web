@@ -15,9 +15,12 @@ export class UsuarioService {
     return this.http.get<User[]>('http://localhost:3000/prueba/'+parametro+'/'+salto+'/'+tomar);
   }
   buscarMedicamento(parametro, salto, tomar):Observable<Paciente[]>{
-
     let url='http://localhost:3000/pruebaPaciente/'+parametro+'/'+salto+'/'+tomar;
-    console.log(url);
+    return this.http.get<Paciente[]>(url);
+  }
+
+  join():Observable<Paciente[]>{
+    let url='http://localhost:3000/join';
     return this.http.get<Paciente[]>(url);
   }
 

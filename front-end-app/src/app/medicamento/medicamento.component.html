@@ -12,12 +12,12 @@
 </div>
 
 <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li [class]="class">
-      <a class="page-link"  tabindex="-1" >Previous</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" >Next</a>
-    </li>
-  </ul>
+  <<ul class="pagination justify-content-center pagination-lg">
+  <li [class]="class">
+    <a class="page-link" (click)="cargar()" tabindex="-1">Anteriores 4 </a>
+  </li>
+  <li [class]="class2">
+    <a class="page-link" (click)="cargarMas()" >Siguientes 4</a>
+  </li>
+</ul>
 </nav>

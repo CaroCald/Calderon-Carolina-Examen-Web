@@ -33,7 +33,11 @@ export class PeticionPorAceptarComponent implements OnInit {
 
 
   aceptar(){
-  this.service.setEstadoPeticion(true);
-  this.acepto=false;
+    this.service.setEstadoPeticion(true);
+    this.acepto=false;
+  }
+  rechazar(){
+    this.service.setEstadoPeticion(false);
+    this.acepto=false;
   }
 }

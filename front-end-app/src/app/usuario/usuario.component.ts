@@ -45,9 +45,13 @@ export class UsuarioComponent implements OnInit {
         this.service.cambiarBusqueda(data.map(datos=>datos.userPaciente)[i]);
         }
       let nombreUser=data.map(datos=>datos.userPaciente)[0].map(si=>si.nombre)[0];
+      console.log(nombreUser);
       this.usuarioService.buscarMedicamento(nombreUser,0,4).subscribe((data:Paciente[])=>{
-        this.service.cambiarMedicamento(data.map(datos=>datos.medicamentoId)[0]);
+        for(let i=0; i<data.map(datos=>datos.medicamentoId).length; i++){
+          this.service.cambiarMedicamento(data.map(datos=>datos.medicamentoId)[i]);
+        }
       });
+
     });
   }
 
@@ -55,7 +59,6 @@ export class UsuarioComponent implements OnInit {
   seleccionar(indice) {
     let url = ['/seleccion'];
     this._router.navigate(url);
-    console.log(indice);
     this.service.setIdUsuario(indice);
   }
 

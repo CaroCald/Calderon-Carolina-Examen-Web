@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Paciente } from '../paciente/paciente.service';
 
 @Injectable()
 export class MedicamentoServicio {
@@ -16,4 +17,6 @@ export interface medicamentos{
    paciente: number,
   estado,
   medicamentoPeticionId;number;
+  medicamentoId:medicamentos;
+  pacienteId:Paciente;
 }
