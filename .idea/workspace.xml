@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1d30ad2-e0d9-4b75-8af7-dedf57a48be6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/Servicios/servicio.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/Servicios/servicio.app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.servicio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/medicamento/medicamento.servicio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/paciente/paciente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/paciente/paciente.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/paciente/paciente.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/paciente/paciente.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/peticion-por-aceptar/peticion-por-aceptar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/peticion-por-aceptar/peticion-por-aceptar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/peticion-por-aceptar/peticion-por-aceptar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/peticion-por-aceptar/peticion-por-aceptar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/usuario/usuario.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/usuario/usuario.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end-app/src/app/usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end-app/src/app/usuario/usuario.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e1d30ad2-e0d9-4b75-8af7-dedf57a48be6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -165,7 +153,7 @@
       <path value="$PROJECT_DIR$/project/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -274,16 +262,15 @@
       <workItem from="1531932721504" duration="17557000" />
       <workItem from="1532210662123" duration="9927000" />
       <workItem from="1532277454482" duration="4310000" />
-      <workItem from="1532283190741" duration="3051000" />
+      <workItem from="1532283190741" duration="3245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134099000" />
+    <option name="totallyTimeSpent" value="134293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24304539" />
