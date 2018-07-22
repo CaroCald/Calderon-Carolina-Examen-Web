@@ -16,6 +16,7 @@ export class ServicioApp {
   emitirPaciente: EventEmitter<Paciente[]> = new EventEmitter();
   emitirMedicamento: EventEmitter<medicamentos[]> = new EventEmitter();
   paciente:Paciente[];
+  estadoPeticion:boolean;
 
   setIdUsuario(id) {
     this.idUsuario = id;
@@ -33,6 +34,9 @@ export class ServicioApp {
 
   setEstado(estado){
     this.estadoMedicamento=estado
+  }
+  setEstadoPeticion(estado){
+    this.estadoPeticion=estado
   }
   setIdMedicamento(id){
     this.idMedicamentos=id;

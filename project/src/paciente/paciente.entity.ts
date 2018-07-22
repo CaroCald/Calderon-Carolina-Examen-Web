@@ -28,7 +28,6 @@ export class PacienteEntity {
   urlPaciente: string;
 
   @OneToMany(type => MedicamentoEntity, med=>med.paciente)
-
   medicamentoId:MedicamentoEntity[];
 
   @ManyToOne(type => UsuarioEntity, pacienteId=>pacienteId.userPaciente)

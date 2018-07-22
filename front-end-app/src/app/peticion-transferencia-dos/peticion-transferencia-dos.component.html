@@ -1,37 +1,19 @@
-<h3 style="text-align: center">SELECCION DE TRANSFERENCIA</h3>
+<app-peticion-por-aceptar *ngFor="let info of peticion"
+[nombreUsuario]="detalleUsuario.nombre"
+                          [urlUsuario]="detalleUsuario.url"
+                          [nombreMedicamento]="medicamento[0].nombre"
+                          [urlMedicamento]="medicamento[0].urlMedicamento"
+                          [usadoPara]="medicamento[0].usadoPara"
+                          [nombreMedicamentoDos]="detalleMedicamento.nombreMed"
+                          [urlMedicamentoDos]="detalleMedicamento.url"
+                          [usadoParaDos]="detalleMedicamento.usado"
+></app-peticion-por-aceptar>
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <app-card-usuario
-        [urlImagen]="detalleUsuario.url"
-        [nombre]="detalleUsuario.nombre"
-      ></app-card-usuario>
+    <div class="col-sm-4"> </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-success" (click)="cargarMas()">Cargar mas</button>
     </div>
-    <div class="col-sm-6">
-
-    </div>
+    <div class="col-sm-4"> </div>
   </div>
 </div>
-
-
-<div class="container" style="margin-bottom: 20px; margin-top: 30px">
-  <div class="row" style="margin-left: 12px">
-    <div class="col-sm-3" *ngFor="let info of medicamento" style="margin-bottom: 15px" >
-      <div class="card" style="width: 15rem">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-sm-6">
-              <p style="text-align: center">{{info.nombre}} </p>
-              <p style="text-align: center"> {{info.usadoPara}} </p>
-            </div>
-            <div class="col-sm-6">
-              <img src={{info.urlMedicamento}} alt="" style="width: 100px; height: 100px; align-content: center; margin-top: 10px">
-            </div>
-          </div>
-        </div>
-        <button type="button" class="btn btn-secondary" (click)="seleccionar(info.id, info.estado)">Pedir Trasnferencia</button>
-      </div>
-    </div>
-  </div>
-</div>
-

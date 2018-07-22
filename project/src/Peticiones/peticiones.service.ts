@@ -13,7 +13,7 @@ export class PeticionesService{
   async prueba(saltar, tomar): Promise<PeticionesEntity[]> {
     return await this.peticionRepository.find(
       {
-        relations: ["userPeticion" ] ,
+        relations: ["userPeticion", "medPeticion"] ,
         skip: saltar, take:tomar
       }
     );

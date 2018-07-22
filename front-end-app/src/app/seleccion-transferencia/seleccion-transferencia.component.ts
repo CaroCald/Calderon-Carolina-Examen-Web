@@ -51,7 +51,7 @@ export class SeleccionTransferenciaComponent implements OnInit {
 
   }
   seleccionar(indice, estado){
-    let url=['/transferirDos'];
+    let url=['/transferir'];
     estado=true;
     this.service.setEstado(estado);
     this.service.setIdMedicamento(indice);

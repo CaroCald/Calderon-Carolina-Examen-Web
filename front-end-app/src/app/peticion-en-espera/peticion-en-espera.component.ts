@@ -6,6 +6,7 @@ import {CookieService} from "ngx-cookie-service";
 import {ServicioApp} from "../Servicios/servicio.app";
 import {HttpClient} from "@angular/common/http";
 import {User} from "../usuario/usuario.service";
+import { Peticion } from '../peticion-transferencia/peticion.service';
 
 @Component({
   selector: 'app-peticion-en-espera',
@@ -14,7 +15,7 @@ import {User} from "../usuario/usuario.service";
 })
 export class PeticionEnEsperaComponent implements OnInit {
 
-  //medicamento:medicamentos[]=[];
+  medicamento:medicamentos[]=[];
   usuario:User;
   detalleUsuariio={
     nombre:'',
@@ -25,21 +26,32 @@ export class PeticionEnEsperaComponent implements OnInit {
     usadoPara:'',
     url:''
   };
+  detalleMedicamentoDos={
+    nombre:'',
+    usadoPara:'',
+    url:''
+  };
   constructor(private http: HttpClient, private _router: Router,
               private service:ServicioApp,  private cookieService: CookieService) { }
 
   ngOnInit() {
+    this.http.get<Peticion[]>('http://localhost:3000/peticiones/0/4').subscribe((data: Peticion[]) => {
+      this.detalleMedicamento.usadoPara=data[0].medPeticion[0].usadoPara;
+      this.detalleMedicamento.nombre=data[0].medPeticion[0].nombre;
+      this.detalleMedicamento.url=data[0].medPeticion[0].urlMedicamento;
+    });
+
     this.http.get<medicamentos[]>('http://localhost:3000/Medicamento').subscribe((data: medicamentos[]) => {
-      this.detalleMedicamento.nombre =data[this.service.idMedicamentos].nombre;
-      this.detalleMedicamento.url =data[this.service.idMedicamentos].urlMedicamento;
-      this.detalleMedicamento.usadoPara =data[this.service.idMedicamentos].usadoPara;
+      this.detalleMedicamentoDos.nombre =data[this.service.idMedicamentos-1].nombre;
+      this.detalleMedicamentoDos.url =data[this.service.idMedicamentos-1].urlMedicamento;
+      this.detalleMedicamentoDos.usadoPara =data[this.service.idMedicamentos-1].usadoPara;
 
     });
     this.http.get<Paciente[]>('http://localhost:3000/join').subscribe((data: Paciente[]) => {
       for(let i=0; i<data[this.service.idUsuario].medicamentoId.length; i++){
-        /*if(this.service.estadoMedicamento==true){
+        if(this.service.estadoMedicamento==true){
           this.medicamento[i]=data[this.service.idUsuario].medicamentoId[i]
-        }*/
+        }
         console.log(this.service.estadoMedicamento);
       }
     });

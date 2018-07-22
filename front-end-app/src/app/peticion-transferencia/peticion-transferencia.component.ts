@@ -39,9 +39,9 @@ export class PeticionTransferenciaComponent implements OnInit {
     this.detalleUsuario.url = this.cookieService.get('url');
 
     this.http.get<medicamentos[]>('http://localhost:3000/Medicamento').subscribe((data: medicamentos[]) => {
-      this.detalleMedicamento.nombre =data[this.service.idMedicamentos].nombre;
-      this.detalleMedicamento.ur =data[this.service.idMedicamentos].urlMedicamento;
-      this.detalleMedicamento.usuadoPara =data[this.service.idMedicamentos].usadoPara;
+      this.detalleMedicamento.nombre =data[this.service.idMedicamentos-1].nombre;
+      this.detalleMedicamento.ur =data[this.service.idMedicamentos-1].urlMedicamento;
+      this.detalleMedicamento.usuadoPara =data[this.service.idMedicamentos-1].usadoPara;
 
     });
     this.http.get<Paciente[]>('http://localhost:3000/join').subscribe((data: Paciente[]) => {

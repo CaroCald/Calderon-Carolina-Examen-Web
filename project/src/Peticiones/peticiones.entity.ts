@@ -12,6 +12,9 @@ export class PeticionesEntity {
   @OneToMany(type => UsuarioEntity, userPaciente=>userPaciente.peticion)
   userPeticion:UsuarioEntity[];
 
+  @OneToMany(type => MedicamentoEntity, medPeticion=>medPeticion.medicamentoPeticion)
+  medPeticion:MedicamentoEntity[];
+
   @ManyToOne(type => MedicamentoEntity, medicamentoP=>medicamentoP.medicamentoPeticion)
   peticion:MedicamentoEntity;
 

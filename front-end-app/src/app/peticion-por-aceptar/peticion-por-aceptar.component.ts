@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Paciente} from "../paciente/paciente.service";
 import {Router} from "@angular/router";
 import {CookieService} from "ngx-cookie-service";
 import {ServicioApp} from "../Servicios/servicio.app";
 import {HttpClient} from "@angular/common/http";
 import {medicamentos} from "../medicamento/medicamento.servicio";
+import { Peticion } from '../peticion-transferencia/peticion.service';
+import { t } from '@angular/core/src/render3';
 @Component({
   selector: 'app-peticion-por-aceptar',
   templateUrl: './peticion-por-aceptar.component.html',
@@ -16,25 +18,22 @@ export class PeticionPorAceptarComponent implements OnInit {
               private service:ServicioApp,  private cookieService: CookieService) { }
   medicamento:medicamentos[]=[];
 
-  detalleMedicamento={
-    nombre:'',
-    usadoPara:'',
-    url:''
-  };
+  @Input()nombreMedicamento;
+  @Input() usadoPara;
+  @Input()urlMedicamento;
+  @Input()nombreMedicamentoDos;
+  @Input() usadoParaDos;
+  @Input()urlMedicamentoDos;
+  @Input() nombreUsuario;
+  @Input() urlUsuario;
+  acepto=true;
   ngOnInit() {
-    this.http.get<medicamentos[]>('http://localhost:3000/Medicamento').subscribe((data: medicamentos[]) => {
-      this.detalleMedicamento.nombre =data[this.service.idMedicamentos].nombre;
-      this.detalleMedicamento.url =data[this.service.idMedicamentos].urlMedicamento;
-      this.detalleMedicamento.usadoPara =data[this.service.idMedicamentos].usadoPara;
 
-    });
-    this.http.get<Paciente[]>('http://localhost:3000/join').subscribe((data: Paciente[]) => {
-      for(let i=0; i<data[this.service.idUsuario].medicamentoId.length; i++){
-        if(this.service.estadoMedicamento==true){
-          this.medicamento[i]=data[this.service.idUsuario].medicamentoId[i]
-        }
-      }
-    });
   }
 
+
+  aceptar(){
+  this.service.setEstadoPeticion(true);
+  this.acepto=false;
+  }
 }

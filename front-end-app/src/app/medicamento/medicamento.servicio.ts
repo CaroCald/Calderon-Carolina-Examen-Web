@@ -14,5 +14,6 @@ export interface medicamentos{
    numeroPastillas: number,
    urlMedicamento: any,
    paciente: number,
-  estado;
+  estado,
+  medicamentoPeticionId;number;
 }

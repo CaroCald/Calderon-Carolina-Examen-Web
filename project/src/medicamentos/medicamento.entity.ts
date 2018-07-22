@@ -31,12 +31,10 @@ export class MedicamentoEntity {
   @Column({length: 500})
   urlMedicamento: string;
 
-  @ManyToOne(type => PacienteEntity,
-    paciente=>paciente.medicamentoId)
-
+  @ManyToOne(type => PacienteEntity, paciente=>paciente.medicamentoId)
   paciente:PacienteEntity;
 
-  @OneToMany(type => PeticionesEntity, userPaciente=>userPaciente.peticion)
-  medicamentoPeticion:PeticionesEntity[];
+  @ManyToOne(type => PeticionesEntity, userPaciente=>userPaciente.medPeticion)
+  medicamentoPeticion:PeticionesEntity;
 
 }

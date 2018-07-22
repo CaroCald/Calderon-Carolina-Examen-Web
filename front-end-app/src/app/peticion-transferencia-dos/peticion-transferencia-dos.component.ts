@@ -6,6 +6,8 @@ import {CookieService} from "ngx-cookie-service";
 import {ServicioApp} from "../Servicios/servicio.app";
 import {HttpClient} from "@angular/common/http";
 import {User} from "../usuario/usuario.service";
+import { Peticion } from '../peticion-transferencia/peticion.service';
+import { d } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-peticion-transferencia-dos',
@@ -16,16 +18,17 @@ export class PeticionTransferenciaDosComponent implements OnInit {
   usuario:User;
   medicamento:medicamentos[]=[];
   paciente: Paciente[];
+  peticion:Peticion[];
   constructor(private http: HttpClient, private _router: Router, private service:ServicioApp, ) { }
 
   detalleUsuario={
     nombre:'',
     url:''
   };
-  detallePaciente={
-    nombre:'',
-    apellido:'',
-    edad:'',
+
+  detalleMedicamento={
+    nombreMed:'',
+    usado:'',
     url:''
   };
 
@@ -34,21 +37,33 @@ export class PeticionTransferenciaDosComponent implements OnInit {
   }
 
   cargarDatos(){
-    this.http.get<User[]>('http://localhost:3000/usuario').subscribe((data: User[]) => {
-      this.detalleUsuario.nombre=data[this.service.idUsuario-1].nombreUsuario;
-      this.detalleUsuario.url=data[this.service.idUsuario-1].urlUsuario;
-    });
-    this.http.get<Paciente[]>('http://localhost:3000/Paciente').subscribe((data: Paciente[]) => {
-      this.detallePaciente.nombre = data[this.service.idUsuario].nombre;
-      this.detallePaciente.apellido = data[this.service.idUsuario].apellido;
-      this.detallePaciente.url = data[this.service.idUsuario].urlPaciente;
-    });
-    this.http.get<Paciente[]>('http://localhost:3000/join').subscribe((data: Paciente[]) => {
-      for(let i=0; i<data[this.service.idUsuario].medicamentoId.length; i++){
-        this.medicamento[i]=data[this.service.idUsuario].medicamentoId[i]
-      }
+    this.http.get<Peticion[]>('http://localhost:3000/peticiones/0/2').subscribe((data: Peticion[]) => {
+      this.peticion=data;
+      this.detalleUsuario.nombre=data[0].userPeticion[0].nombreUsuario;
+      this.detalleUsuario.url=data[0].userPeticion[0].urlUsuario;
+      this.medicamento=data.map(value => value.medPeticion)[0];
+      this.detalleMedicamento.nombreMed=data[0].medPeticion[0].nombre;
+      this.detalleMedicamento.url=data[0].medPeticion[0].urlMedicamento;
+      this.detalleMedicamento.usado=data[0].medPeticion[0].usadoPara;
+
+
     });
 
+
+  }
+
+  cargarMas(){
+    this.http.get<Peticion[]>('http://localhost:3000/peticiones/0/4').subscribe((data: Peticion[]) => {
+      this.peticion=data;
+      this.detalleUsuario.nombre=data[0].userPeticion[0].nombreUsuario;
+      this.detalleUsuario.url=data[0].userPeticion[0].urlUsuario;
+      this.medicamento=data.map(value => value.medPeticion)[0];
+      this.detalleMedicamento.nombreMed=data[1].medPeticion[1].nombre;
+      this.detalleMedicamento.url=data[1].medPeticion[1].urlMedicamento;
+      this.detalleMedicamento.usado=data[1].medPeticion[1].usadoPara;
+
+
+    });
   }
   seleccionar(indice, estado){
     let url=['/transferir'];
